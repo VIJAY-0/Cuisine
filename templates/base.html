@@ -4,14 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="{% static 'css/loginbtn.css/' %}" />
     <link rel="stylesheet" href="{% static 'style.css/' %}" />
     <link rel="stylesheet" href="{% static 'css/cart.css/' %}" />
-
-
-
-
-    
     {% block head %}{% endblock head %}
 </head>
 <body>
@@ -27,24 +22,31 @@
           <li><a href="#">Contact </a></li>
           {% if request.user.is_authenticated %}
           <li><button  class='cartbtn'id='cartbtn' popovertarget="cart"> <img width="25px" height="25px" src=" {% static 'images/cart.png' %} " alt=""></button>
-          <div class='cart' id='cart' popover > 
-            <div id="itemslist">
+            <div class='cart' id='cart' popover > 
+              <div id="itemslist">
+              </div>  
+              <div class='cartbtns' id="checkout" cstmlink="{% url 'Home:profile' %}" >Check Out</div> 
+              <div class='cartbtns' id="clearcart">Clear cart</div></div>
+            </li>
+            <li><div class="dropdown">
+              <button class="dropbtn"><img width="35px" height="35px" src=" {% static 'images/user.png' %} " alt=""></button>
+              <div class="dropdown-content">
+                <a href="{% url 'Home:profile' %}">My Profile</a>
+                <a href="{% url 'Accounts:logout' %}">Logout</a>
+              </div>
+            </div>
+          </li>
 
-            </div>  
-            <div class='cartbtns' id="checkout" cstmlink="{% url 'Home:profile' %}" >Check Out</div> 
-            <div class='cartbtns' id="clearcart">Clear cart</div>
-
-          </div></li>
-        <li><a href="{% url 'Accounts:logout' %}"> <h3>Logout</h3> <h6>{{user.username}}</h6> </a></li>
-        {% else %}
-        <li><a href="{% url 'Accounts:login' %}">Login/Signup</a></li>
-        {% endif %}
-
-        </ul>
-      </header>
-
-
-
+            {% else %}
+            <li><a href="{% url 'Accounts:login' %}">Login/Signup</a></li>
+            {% endif %}
+                
+            
+          </ul>
+        </header>
+        
+        
+        
 
       {% block body %}{% endblock body %}
     

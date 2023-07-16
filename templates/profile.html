@@ -15,16 +15,28 @@
         <div class="placeorder">
             <form method="post" action="{% url 'Home:reciveorder' %}">
                 {% csrf_token %}
+
                 <input type="hidden" id="itemsJSON" name="itemsJSON" value="itemsJSON">
-                <input type="submit" >
+                <input type="hidden" id="amount" name="amount" value="amount">
+                <input type="submit"  id="placeorder" value='Place order'>
+
             </form>
         </div>
     </li>
     <li>
         <h2>My Orders</h2>
         
-        {% if order is not None %}
+        {% if prev_orders is not None %}
         <h2>order</h2>
+         <ul>
+            
+            {% for order in prev_orders %}
+                <li>{{order.items}}</li>                
+            {% endfor %}
+                
+         </ul>
+        {% else %}
+        No order placed yet 
         {% endif %}
             
     </li>

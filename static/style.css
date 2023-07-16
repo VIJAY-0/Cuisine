@@ -73,6 +73,7 @@
 
 header
 {
+    background-color: #0000007d;
     font-size: 0.8em;
     position:fixed;
     display: flex;

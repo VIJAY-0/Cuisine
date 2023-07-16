@@ -9,15 +9,14 @@ if (localStorage.getItem('cart')==null)
 else{
     cart = JSON.parse(localStorage.getItem('cart'))
     updateCart(cart);
+    document.getElementById('cartbtn').click();
 }
-
 
 $('#checkout').on('click',function(){
     console.log(this)
     var url =this.getAttribute("cstmlink");
     console.log(url)
     window.location.href = url;
-
 })
 
 

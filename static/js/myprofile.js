@@ -1,10 +1,8 @@
-
-
 cart=JSON.parse(localStorage.getItem('cart'))
 console.log(cart)
 
 var sum=0;
-cartlist="    <ul>"
+cartlist="<ul>"
 for(var item in cart)
 {
     sum+= (cart[item][0]*cart[item][2]);
@@ -18,6 +16,7 @@ cartlist += "</ul>"
 cartlist += "</ul>"
 
 msg ="<h1>Empty cart please shop First !</h1>"
+
 if(sum==0){
     document.getElementById('cartlist').innerHTML=msg
 }
@@ -26,4 +25,9 @@ else{
 }
 
 document.getElementById('itemsJSON').setAttribute('value',JSON.stringify(cart));
+document.getElementById('amount').setAttribute('value',sum);
+document.getElementById('placeorder').addEventListener('click',function(){
+localStorage.clear()
+})
+
 
