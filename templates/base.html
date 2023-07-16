@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'style.css/' %}" />
+    <link rel="stylesheet" href="{% static 'css/cart.css/' %}" />
+
+
+
+
+    
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <header >
+        <a href="#" class="logo">Food<span>.</span></a>
+        <ul class="navigation">
+          <li><a href="{% url 'Home:home' %}">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Our Specials</a></li>
+          <li><a href="#menu">Expert </a></li>
+          <li><a href="#testimonials">Testimonials </a></li>
+          <li><a href=" {% url 'Home:place_order_page' %} ">Place Order </a></li>
+          <li><a href="#">Contact </a></li>
+          {% if request.user.is_authenticated %}
+          <li><button  class='cartbtn'id='cartbtn' popovertarget="cart"> <img width="25px" height="25px" src=" {% static 'images/cart.png' %} " alt=""></button>
+          <div class='cart' id='cart' popover > 
+            <div id="itemslist">
+
+            </div>  
+            <div class='cartbtns' id="checkout" cstmlink="{% url 'Home:profile' %}" >Check Out</div> 
+            <div class='cartbtns' id="clearcart">Clear cart</div>
+
+          </div></li>
+        <li><a href="{% url 'Accounts:logout' %}"> <h3>Logout</h3> <h6>{{user.username}}</h6> </a></li>
+        {% else %}
+        <li><a href="{% url 'Accounts:login' %}">Login/Signup</a></li>
+        {% endif %}
+
+        </ul>
+      </header>
+
+
+
+
+      {% block body %}{% endblock body %}
+    
+    
+      <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+          const header = document.querySelector("header");
+          header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        </script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script src="{% static 'js/cart.js' %}" type="text/javascript"></script>
+</body>
+</html>

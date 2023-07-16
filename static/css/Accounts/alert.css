@@ -1,0 +1,9 @@
+.alert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(253, 0, 0) ;
+    color: red;
+    padding: 10px 0px;
+    background-color: rgba(255, 42, 0, 0.273);
+}

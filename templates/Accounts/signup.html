@@ -1,0 +1,43 @@
+{% extends 'Accounts/authenticate.html' %}
+{% load static %}
+
+
+{% block tittle %}
+  Sign Up
+{% endblock tittle %}
+  
+
+{% block body %}
+<div class="container">
+  
+  <div class="registration form">
+    <header>Signup</header>
+    <form method="post"  action="{% url 'Accounts:signup' %}">
+      {% csrf_token %}
+      <input type="text" placeholder="Enter your email" name="email" required>
+      <input type="password" placeholder="Create a password" name="pass1" required>
+      <input type="password" placeholder="Confirm your password" name="pass2" required>
+      {% if messages %}
+      {% for message in messages %}
+      {% if 'signup' in message.tags  %}
+      <div class="alert " role="alert">
+        <strong> {{message}}</strong>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+      <input type="submit"  class="button" value="Signup" name="signupbtn">
+    </form>
+    <div class="signup">
+      <span class="signup">Already have an account?
+       <a href="{% url 'Accounts:login' %}"><label for="check">Login</label></a>
+      </span>
+    </div>
+  </div>
+
+
+</div>
+
+  
+{% endblock body %}
+  

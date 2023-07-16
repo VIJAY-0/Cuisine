@@ -1,0 +1,96 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+}
+:root {
+  --cwide: 12em;
+  --chigh: 18em;
+  --card-tranition-time:0.3s;
+  --extention:2em;
+}
+.testimonials
+{
+    margin-top: 150px;
+    background: url(images//testiBack.jpg);
+    display: flex;
+    min-height:80vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    background-size: cover;
+}
+.testimonials > h1{
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(2em,10vw,3em);
+    width: 100vw;
+    text-align: center;
+    margin: 80px 0px 5px 0px;
+}
+.testimonials > h1 span{
+    color:rgb(255, 0, 179);
+    font-size: 1em;
+    font-weight: 700;
+    
+}
+
+.contain
+{
+    display: flex;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+.card {
+    padding: 0.1em 0.em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--cwide);
+    height: 14em;
+    background-color: rgb(210, 255, 255);
+    border: 15px solid rgb(255, 255, 255);
+    transition: var(--card-tranition-time);
+    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.527);
+}
+.card:hover{
+    transform: scale(1) ;
+    height:calc(var(--extention) + 270px)
+}
+.card img {
+    position: relative;
+    top: 40px;
+    width: calc(var(--cwide) - 20px);
+    transition: var(--card-tranition-time);
+    height: calc(var(--chigh) - 40px);
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+}
+.card:hover img
+{   
+    transform: translateY(calc(var(--extention)/-2 - 24px) );
+}
+.card .text h1{
+    color:rgb(255, 0, 179);
+    
+}
+.card .text
+{   position: relative;
+    margin: 30px 0px;
+    z-index: -1;
+    font-size: 0.7em;
+    top: -80px;
+    padding: 0.5em;
+    text-align: center;
+    transition: var(--card-tranition-time);
+    color:rgb(0, 0, 0) ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card:hover .text
+{   
+    transform: translateY(calc(var(--extention)/2 + 45px));
+}

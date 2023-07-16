@@ -1,0 +1,74 @@
+:root {
+  --wide: 17em;
+  --high: 12em;
+}
+.menucontainer {
+  padding-top: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menucontainer .tittle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+.menucontainer .tittle span {
+
+    font-size:32pt;
+    font-weight: 700;
+    color: rgb(255, 0, 179);
+}
+
+.menucontainer .gallery {
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.menucontainer .gallery .pallet {
+  display: flex;
+  margin: 15px 20px;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  width: var(--wide);
+  border: 8px solid rgb(250, 255, 255);
+  transition: 0.2s;
+  box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.15);
+}
+.menucontainer .gallery .pallet:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.3);
+}
+
+.menucontainer .gallery .pallet .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: cover;
+}
+
+.menucontainer .gallery .pallet .image img {
+  width: var(--wide);
+  height: var(--high);
+}
+.menucontainer .gallery .pallet .description h3 {
+  font-size: 0.8em;
+  color: rgb(255, 0, 179);
+}
+.menucontainer .gallery .pallet .description {
+  display: flex;
+  font-family: sans-serif;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menucontainer .gallery .pallet .description p {
+  text-align: center;
+  font-size: 0.6em;
+  margin-top: 0.5em;
+}

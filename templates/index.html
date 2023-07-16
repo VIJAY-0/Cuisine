@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+  
+<link rel="stylesheet" href="{% static 'about.css' %}" />
+<link rel="stylesheet" href="{% static 'menu.css' %}" />
+<link rel="stylesheet" href="{% static 'testimonials.css' %}">
+{% endblock head %}
+  
+
+   
+  
+  {% block tittle %}
+    Home
+  {% endblock tittle %}
+
+
+
+
+    
+    {% block body %}
+          
+
+
+    <section class="banner" id="banner"  style="background-image: url( '{% static 'images/bgBanner2.jpg' %}' )">
+      <div class="content">
+        <h2>Always Choose Good</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nostrum
+          dolorum excepturi veniam earum debitis sit soluta, culpa minus ea
+          laborum esse porro non beatae delectus, sed deserunt error explicabo!
+        </p>
+        <a href="{% url 'Home:place_order_page' %}" class="btn"> Place Order</a>
+      </div>
+    </section>
+
+    <section class="aboutcontainer" id="about">
+    
+    
+      <div class="abtText">
+        <h1 class="tittletext"><span>A</span>bout Us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nam
+          non nihil nisi, aspernatur rerum aliquam fuga odit eos ab ipsa
+          molestias labore. Id perferendis omnis ipsa iusto. Aspernatur, ipsa?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo sunt,
+          numquam, velit ab quaerat ipsa cupiditate, in consectetur nesciunt vel
+          nulla qui eaque dignissimos odio dicta aut laborum fugiat
+          similique!Lorem
+          <br /><br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam Lorem
+          ipsum, dolor sit amet consectetur adipisicing elit. Deleniti dolores
+          excepturi temporibus ipsa voluptatum deserunt vero quos quia non
+          debitis hic doloribus, consectetur doloremque minima ex voluptatibus
+          natus nesciunt velit!logo autem ducimus temporibus eaque sint maiores
+          culpa recusandae. Ad veritatis doloribus repellat reprehenderit vitae
+          voluptatem repellendus perferendis corporis dolore. Distinctio, illum.
+          <br /><br />
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
+          maxime esse nulla omnis porro suscipit reiciendis sit ducimus debitis.
+          Quas inventore error maxime eius porro quaerat, pariatur voluptate
+          distinctio omnis?
+        </p>
+      </div>
+
+
+
+      <div class="imgbox">
+        <img src=" {% static 'images//aboutimg1.jpg' %} " width="300px" alt="" />
+      </div>
+    </section>
+
+    <section class="menucontainer" id="menu">
+      <div class="tittle">
+        <h2><span class="firstletter">O</span>ur Specials</h2>
+      </div>
+
+      <div class="gallery">
+        <div class="pallet">
+          <div class="image"><img src="{% static 'images//cakes.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Cakes</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+
+        <div class="pallet">
+          <div class="image"><img src=" {% static 'images//cherries.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Cherries</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+
+        <div class="pallet">
+          <div class="image"><img src="{% static 'images//cookies.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Cookies</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+
+        <div class="pallet">
+          <div class="image"><img src="{% static 'images//salad.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Salad</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+
+        <div class="pallet">
+          <div class="image"><img src="{% static 'images//sandwich.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Sandwich</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+
+        <div class="pallet">
+          <div class="image"><img src="{% static 'images//pizza.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Pizza</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+
+        <div class="pallet">
+          <div class="image"><img src="{% static 'images//cupcakes.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Cupcakes</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+
+        <div class="pallet">
+          <div class="image"><img src="{% static 'images//fruitsalad.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Fruit salad</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+
+        <div class="pallet">
+          <div class="image"><img src="{% static 'images//fruitsalad.jpg' %}" alt="" /></div>
+          <div class="description">
+            <h3>Juice</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Labore,repellat quo excepturi cupiditate reiciendis dolorem!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+
+      <h1> They <span>S</span>aid About Us</h1>
+      
+      <div class="contain">
+          <div class="card">
+            <img src="{% static 'images//testi1.jpg' %}" alt="Test1" />
+            <div class="text">
+              <h1>Someone Famous</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                  earum nulla at sunt, cumque
+                </p>
+            </div>
+          </div>
+      </div>
+    
+      
+      <div class="contain">
+          <div class="card">
+            <img src="{% static 'images//testi2.jpg' %}" alt="Test1" />
+            <div class="text">
+              <h1>Someone Famous</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                  earum nulla at sunt, cumque
+                </p>
+            </div>
+          </div>
+      </div>
+    
+      
+      <div class="contain">
+          <div class="card">
+            <img src="{% static 'images//testi3.jpg' %}" alt="Test1" />
+            <div class="text">
+              <h1>Someone Famous</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                  earum nulla at sunt, cumque
+                </p>
+            </div>
+          </div>
+      </div>
+    
+      
+      <div class="contain">
+          <div class="card">
+            <img src="{% static 'images//testi4.jpg' %}" alt="Test1" />
+            <div class="text">
+              <h1>Someone Famous</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                  earum nulla at sunt, cumque
+                </p>
+            </div>
+          </div>
+      </div>
+      
+      <div class="contain">
+          <div class="card">
+            <img src="{% static 'images//testi5.jpg' %}" alt="Test1" />
+            <div class="text">
+              <h1>Someone Famous</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                  earum nulla at sunt, cumque
+                </p>
+            </div>
+          </div>
+      </div>
+      
+      <div class="contain">
+          <div class="card">
+            <img src="{% static 'images//testi6.jpg' %}" alt="Test1" />
+            <div class="text">
+              <h1>Someone Famous</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                  earum nulla at sunt, cumque
+                </p>
+            </div>
+          </div>
+      </div>
+      
+      <div class="contain">
+          <div class="card">
+            <img src="{% static 'images//testi7.jpg' %}" alt="Test1" />
+            <div class="text">
+              <h1>Someone Famous</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                  earum nulla at sunt, cumque
+                </p>
+            </div>
+          </div>
+      </div>
+      
+      <div class="contain">
+          <div class="card">
+            <img src="{% static 'images//testi2.jpg' %}" alt="Test1" />
+            <div class="text">
+              <h1>Someone Famous</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                  earum nulla at sunt, cumque
+                </p>
+            </div>
+          </div>
+      </div>
+    
+      
+    
+  </section>
+
+
+
+    {% endblock body %}
+      

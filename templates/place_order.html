@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'menu.css' %}" />
+<title>Document</title>    
+{% endblock head %}
+
+{% block body %}
+
+
+<section class="menucontainer" id="menu">
+  
+  
+  <div class="tittle">
+    <h2><span class="firstletter">O</span>ur Specials</h2>
+  </div>
+  
+  {% for cat in category  %}
+  {% if cat.items_set.all|length  %}
+  <h1>{{cat}}</h1>
+  {% endif %}    
+        <div class="gallery">
+                {% for item in cat.items_set.all %}
+                <div class="pallet">
+                    <div class="image">
+                      <img src="{% static ''|add:item.img_path%}" alt="" />
+                    </div>
+                    <br>
+                    $<div class="price" id="price{{item.id}}">{{item.price}}</div>
+                    <div class="addtocartP" id="addtocartP{{item.id}}">
+                    <div class="addtocart" id="{{item.id}}">Add to cart</div>
+                    </div>
+                    <div class="description">
+                      <h3 id="name{{item.id}}">{{item.name}}</h3>
+                      <p>
+                        <br />
+                        Lorem ipsum, dolor sitrr amet consectetur adipisicing elit. Ipsum ad
+                        fugit quis officiis in? Molestias, blanditiis eius suscipit id
+                        labore laborum quas fuga earum hic? 
+                      </p>
+                    </div>
+                  </div>
+                    
+                  {% endfor %}
+                </div>
+                
+                {% endfor %}
+                
+                
+                  
+                  
+                  
+                  
+                </section>
+
+
+{% endblock body %}
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+.aboutcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 60px;
+}
+.aboutcontainer .abtText h1 {
+ font-size: 40px;
+ margin: 20px;
+
+}
+
+.aboutcontainer .abtText {
+    
+    min-width: 500px;
+    width: 550px;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-weight: 100;
+    font-size: 13pt;
+}
+.aboutcontainer .abtText span {
+    color:rgb(255, 0, 179) ;
+    
+}
+
+.aboutcontainer .imgbox {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutcontainer .imgbox img {
+margin: 20px;
+ width: 550px;
+ box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+
+}
