@@ -4,15 +4,15 @@
     padding: 0%;
 }
 :root {
-  --cwide: 12em;
-  --chigh: 18em;
+  --cwide: 20em;
+  --chigh: 50em;
   --card-tranition-time:0.3s;
-  --extention:2em;
+  --extention:3em;
 }
 .testimonials
 {
     margin-top: 150px;
-    background: url(images//testiBack.jpg);
+    background-color: rgba(255, 20, 145, 0.039);
     display: flex;
     min-height:80vh;
     justify-content: center;
@@ -50,12 +50,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: var(--cwide);
-    height: 14em;
-    background-color: rgb(210, 255, 255);
-    border: 15px solid rgb(255, 255, 255);
+    width: calc(var(--cwide) - 10px);
+    height: 20em;
+    background-color: rgba(161, 255, 47, 0.139);
+    border: 5px solid rgb(255, 255, 255);
     transition: var(--card-tranition-time);
-    box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.527);
+    /* box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.527); */
 }
 .card:hover{
     transform: scale(1) ;
@@ -67,7 +67,7 @@
     width: calc(var(--cwide) - 20px);
     transition: var(--card-tranition-time);
     height: calc(var(--chigh) - 40px);
-    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+    /* box-shadow: 0px 5px 10px rgb(0, 0, 0); */
 }
 .card:hover img
 {   

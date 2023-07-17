@@ -1,0 +1,65 @@
+
+.content p {
+    font-weight: 400;
+    color: zblack;
+}
+
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+.banner .content
+{
+    max-width: 950px;
+    text-align: center;
+}
+
+.banner .content h2
+{
+    font-size: 5em;
+    color:white;
+    font-family:sans-serif;
+    font-weight: 900;
+
+
+}
+.banner .content p
+{
+    font-family:cursive;
+    font-size: 1em;
+    color:white;
+    padding: 5px;
+
+}
+.banner .btn
+{
+    margin-top: 15px;
+    font-size: 1em;
+    padding: 10px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration:none;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    background:rgb(255, 25, 132);
+
+
+}
+.btn:hover
+{
+
+    transform: translateY(-3px);
+    transform: translateX(-1px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
+}
+

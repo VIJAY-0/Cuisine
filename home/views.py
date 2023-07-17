@@ -6,7 +6,11 @@ from home import  keys
 
 def home(request):
     # return HttpResponse('Hello')
-    return render(request,'index.html')
+    items=Items.objects.all()
+    category=Category.objects.all()
+    context={'items':items,
+             'category':category}
+    return render(request,'index.html',context)
 
 def place_order_page(request):
     items=Items.objects.all()
