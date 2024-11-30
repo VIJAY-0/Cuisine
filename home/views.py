@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from home.models import *
 from home import  keys
+import json
+
 
 # Create your views here.home
 
@@ -21,8 +23,20 @@ def place_order_page(request):
 
 def profile(request):
     user=request.user
-    placed_order=Orders.objects.filter(name=user.email)
-    context={'prev_orders':placed_order}
+    placed_orders=Orders.objects.filter(name=user.email)
+    items=[]
+    for order in placed_orders:
+        itemJSON=json.loads(order.items)
+        its=[]
+        # print(itemJSON.items())
+        amnt=0;
+        for key, value in itemJSON.items():
+            # print(f"Key: {key}, Value: {value[2]}")
+            its.append([value[0],value[1]])
+            amnt=float(value[0])*float(value[2])
+            print(amnt)
+        items.append([its,amnt])
+    context={'prev_orders':items}
     return render(request,'profile.html',context)
 
 def reciveOrder(request):

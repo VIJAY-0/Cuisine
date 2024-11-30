@@ -33,6 +33,8 @@ ALLOWED_HOSTS = ['192.168.137.1',
 # Application definition
 
 INSTALLED_APPS = [
+    'payment',
+    'corsheaders',
     'home.apps.HomeConfig',
     'Accounts.apps.AccountsConfig',
     'django.contrib.admin',
@@ -43,7 +45,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+
+
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,6 +57,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # React frontend
 ]
 
 ROOT_URLCONF = 'cuisine.urls'
@@ -123,6 +135,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,"static/"),
+    BASE_DIR / 'payment-frontend' / 'build' / 'static',
 ]
 
 

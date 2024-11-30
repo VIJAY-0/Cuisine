@@ -7,44 +7,59 @@
     
 {% block body %}
 <br><br><br><br>
-<h1>My profile</h1>
-<ul>
-    <li>
-        <h2>My cart</h2>
-        <div class="cartlist" id="cartlist"></div>
-        <div class="placeorder">
-            <form method="post" action="{% url 'Home:reciveorder' %}">
-                {% csrf_token %}
 
-                <input type="hidden" id="itemsJSON" name="itemsJSON" value="itemsJSON">
-                <input type="hidden" id="amount" name="amount" value="amount">
-                <input type="submit"  id="placeorder" value='Place order'>
+<div id="myprofile">
 
-            </form>
-        </div>
-    </li>
-    <li>
-        <h2>My Orders</h2>
-        
-        {% if prev_orders is not None %}
-        <h2>order</h2>
-         <ul>
+
+    <h1>My profile</h1>
+    <ul>
+        <li>
+            <h2>My cart</h2>
+            <div class="cartlist" id="cartlist"></div>
+            <div class="placeorder">
+                <form method="post" action="{% url 'Home:reciveorder' %}">
+                    {% csrf_token %}
+    
+                    <input type="hidden" id="itemsJSON" name="itemsJSON" value="itemsJSON">
+                    <input type="hidden" id="amount" name="amount" value="amount">
+                    <input type="submit"  id="placeorder" value='Place order'>
+    
+                </form>
+            </div>
+        </li>
+        <li>
+            <h2>My Orders</h2>
             
-            {% for order in prev_orders %}
-                <li>{{order.items}}</li>                
-            {% endfor %}
+            {% if prev_orders is not None %}
+            <h2>order</h2>
+             <ul>
                 
-         </ul>
-        {% else %}
-        No order placed yet 
-        {% endif %}
-            
-    </li>
-</ul>
-<div id="orders">
+                {% for order in prev_orders %}
+                    <li > 
+                    {% for item in order.0  %}
+                      <b>Qty {{item.0}} </b> {{item.1}}      
+                    {% endfor %}
+                           <b>  Total  :   {{order.1}} </b>     
+                    <hr>
+                         </li> 
+    
+                {% endfor %}
+                    
+             </ul>
+            {% else %}
+            No order placed yet 
+            {% endif %}
+                
+        </li>
+    </ul>
+    <div id="orders">
+    
+    </div>
+    
+    
+
 
 </div>
-
 
 <script src="{% static 'js/myprofile.js' %}" type="text/javascript"></script>
 

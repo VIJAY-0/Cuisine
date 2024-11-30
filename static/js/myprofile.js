@@ -30,4 +30,10 @@ document.getElementById('placeorder').addEventListener('click',function(){
 localStorage.clear()
 })
 
+P_orders=document.getElementsByClassName('prev_order_item');
+console.log(P_orders[0].value)
+
+for(itm in P_orders){
+    console.log(itm)
+}
 
